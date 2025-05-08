@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HushNote</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="Login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sample_note_title">Note</string>
+    <string name="sample_note_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+</resources>

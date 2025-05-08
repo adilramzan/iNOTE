@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activity.AddNoteActivity">
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingBottom="100dp"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:id="@+id/note_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:importantForAutofill="no"
+                android:paddingVertical="10dp"
+                android:textStyle="bold"
+                android:background="@drawable/input_holder"
+                android:inputType="textMultiLine"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/tagChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:singleLine="true" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tagInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Add a tag"
+                tools:ignore="HardcodedText"
+                android:background="@drawable/input_holder"
+                />
+
+            <Button
+                android:id="@+id/addTagButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="?attr/colorAccent"
+                android:text="Add Tag"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/note_image"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:background="@color/ImagePlaceholder"
+                android:contentDescription="Image"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/note_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_holder"
+                android:hint="Content"
+                android:importantForAutofill="no"
+                android:paddingVertical="10dp"
+                android:inputType="textMultiLine"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom bar fixed -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:padding="8dp"
+            android:elevation="4dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/camera_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:icon="@android:drawable/ic_menu_camera"
+                app:iconTint="?attr/colorSurface"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:layout_marginStart="50dp"
+            android:padding="8dp"
+            android:elevation="4dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/gallery_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:icon="@android:drawable/ic_menu_gallery"
+                app:iconTint="?attr/colorSurface"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:layout_marginStart="50dp"
+            android:padding="8dp"
+            android:elevation="4dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:icon="@android:drawable/ic_menu_save"
+                app:iconTint="?attr/colorSurface"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

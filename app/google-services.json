@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "752723351514",
+    "project_id": "iNOTE-932e1",
+    "storage_bucket": "hushnote-932e1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752723351514:android:f58e59cdc4f219a51b52e3",
+        "android_client_info": {
+          "package_name": "com.example.iNOTE"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXSyc_cRBE339zNpEVNAi5D6jYCXLxS8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
